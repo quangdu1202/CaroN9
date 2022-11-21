@@ -15,7 +15,7 @@ function setup() {
 	createCanvas(400, 400);
 	w = width / 3;
 	h = height / 3;
-	//bestMove(); //May danh truoc
+	bestMove(); //May danh truoc
 }
 
 let turnCount = 0;
@@ -33,18 +33,17 @@ function mousePressed() {
 		}
 	}
 	turnCount += 1;
-	if(turnCount%2 == 0) {
-		stroke("#d00")
-	}else {
-		stroke("00f")
-	}
 }
 
 function draw() {
 	background(255);
 	strokeWeight(4);
-	
-	
+	if (turnCount % 2 == 0) {
+		stroke("#d00");
+	} else {
+		stroke("#00f");
+	}
+
 	line(w, 0, w, height);
 	line(w * 2, 0, w * 2, height);
 	line(0, h, width, h);
