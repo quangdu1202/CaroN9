@@ -18,6 +18,8 @@ function setup() {
 	//bestMove(); //May danh truoc
 }
 
+let turnCount = 0;
+
 function mousePressed() {
 	if (currentPlayer == human) {
 		// Human make turn
@@ -30,11 +32,18 @@ function mousePressed() {
 			bestMove();
 		}
 	}
+	turnCount += 1;
+	if(turnCount%2 == 0) {
+		stroke("#d00")
+	}else {
+		stroke("00f")
+	}
 }
 
 function draw() {
 	background(255);
 	strokeWeight(4);
+	
 	
 	line(w, 0, w, height);
 	line(w * 2, 0, w * 2, height);
