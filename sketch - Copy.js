@@ -35,7 +35,8 @@ function mousePressed() {
 function draw() {
 	background(255);
 	strokeWeight(4);
-
+	stroke('#00f');
+	
 	line(w, 0, w, height);
 	line(w * 2, 0, w * 2, height);
 	line(0, h, width, h);
