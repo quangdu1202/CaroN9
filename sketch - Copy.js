@@ -50,8 +50,10 @@ function draw() {
 			let r = w / 4;
 			if (spot == human) {
 				noFill();
+				stroke('#d00');
 				ellipse(x, y, r * 2);
 			} else if (spot == ai) {
+				stroke('#00f');
 				line(x - r, y - r, x + r, y + r);
 				line(x + r, y - r, x - r, y + r);
 			}
