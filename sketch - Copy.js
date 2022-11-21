@@ -35,7 +35,6 @@ function mousePressed() {
 function draw() {
 	background(255);
 	strokeWeight(4);
-	stroke("#00f");
 	
 	line(w, 0, w, height);
 	line(w * 2, 0, w * 2, height);
@@ -52,9 +51,10 @@ function draw() {
 			if (spot == human) {
 				noFill();
 				stroke("#d00");
-				ellipse(x, y, r * 2);
+				ellipse(x, y, r * 2.5);
 			} else if (spot == ai) {
 				stroke("#00f");
+				strokeWeight(5);
 				line(x - r, y - r, x + r, y + r);
 				line(x + r, y - r, x - r, y + r);
 			}
