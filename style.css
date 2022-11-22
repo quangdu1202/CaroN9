@@ -1,0 +1,23 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100vh;
+}
+
+canvas {
+	display: block;
+}
+
+#resultP {
+	position: absolute;
+	bottom: 5vh;
+	color: red;
+}
